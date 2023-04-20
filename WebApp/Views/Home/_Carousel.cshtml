@@ -1,5 +1,4 @@
 @using WebApp.ViewModels.Home
-@using WebApp.ViewModels.Shared
 
 @model CarouselViewModel
 
@@ -7,7 +6,5 @@
 
 @foreach (var product in Model.Products)
 {
-    ProductViewModel productViewModel = new(product);
-
-    <partial name="~/Views/Shared/_Product.cshtml" model="productViewModel" />
+    <partial name="~/Views/Shared/_ProductCard.cshtml" model="product" />
 }

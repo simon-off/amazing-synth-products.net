@@ -1,0 +1,11 @@
+﻿@using WebApp.Models.Entities
+
+@model Product
+
+<h1>@Model.Name</h1>
+<p>@Model.Description</p>
+@foreach (var category in Model.Categories)
+{
+    <p>@category.Name</p>
+}
+<img src="/images/products/@Model.Image" alt="@Model.Name">
