@@ -449,162 +449,162 @@ namespace WebApp.Data.Migrations
                         new
                         {
                             Id = 1,
-                            Description = "Synth!",
+                            Description = "The EchoWave 2000 is a powerful vintage-style synthesizer with unique oscillators, customizable filters, and a built-in sequencer, arpeggiator, and modulation matrix. Whether you're a professional musician or a beginner, the EchoWave 2000 is the perfect tool for unleashing your creativity and exploring new sonic territories.",
                             Image = "product1.jpg",
-                            Name = "Product 1",
-                            Price = 79m
+                            Name = "EchoWave 2000",
+                            Price = 899m
                         },
                         new
                         {
                             Id = 2,
-                            Description = "Synth!",
+                            Description = "The Neptune Starlight is a compact yet powerful synthesizer that offers a wide range of sounds and features. With its advanced synthesis engine, intuitive interface, and onboard effects, you can easily create anything from classic analog tones to cutting-edge digital textures. Whether you're performing on stage or producing in the studio, the Neptune Starlight is an essential tool for any musician.",
                             Image = "product2.jpg",
-                            Name = "Product 2",
-                            Price = 57m
+                            Name = "Neptune Starlight",
+                            Price = 499m
                         },
                         new
                         {
                             Id = 3,
-                            Description = "Synth!",
+                            Description = "The Cosmic Voyager is a stunning analog synthesizer with a classic design that harkens back to the golden age of electronic music. Featuring a full-size keyboard, vintage-style filters, and a powerful modulation matrix, the Cosmic Voyager is a must-have for any synth enthusiast. Whether you're creating soaring lead lines, funky bass grooves, or complex soundscapes, the Cosmic Voyager has you covered.",
                             Image = "product3.jpg",
-                            Name = "Product 3",
-                            Price = 80m
+                            Name = "Cosmic Voyager",
+                            Price = 1199m
                         },
                         new
                         {
                             Id = 4,
-                            Description = "Synth!",
+                            Description = "The Nova Synth 2000 is a powerful virtual analog synthesizer that combines cutting-edge digital technology with classic analog sound. With its intuitive interface, advanced synthesis engine, and onboard effects, you can easily create anything from warm pads and strings to aggressive leads and basses. Whether you're a professional musician or a bedroom producer, the Nova Synth 2000 is the ultimate tool for sound design and music production.",
                             Image = "product4.jpg",
-                            Name = "Product 4",
-                            Price = 67m
+                            Name = "Nova Synth 2000",
+                            Price = 699m
                         },
                         new
                         {
                             Id = 5,
-                            Description = "Synth!",
+                            Description = "The Jupiter Station is a stunning digital synthesizer with a classic design that harkens back to the glory days of synth-pop. Featuring a massive sound engine, intuitive controls, and a sleek user interface, the Jupiter Station is the perfect tool for creating anything from lush pads and ambient textures to powerful leads and basses. Whether you're a professional musician or a hobbyist, the Jupiter Station is a must-have for any synth lover.",
                             Image = "product5.jpg",
-                            Name = "Product 5",
-                            Price = 62m
+                            Name = "Jupiter Station",
+                            Price = 999m
                         },
                         new
                         {
                             Id = 6,
-                            Description = "Synth!",
+                            Description = "The Solaris Synth x2 is a cutting-edge digital synthesizer that combines advanced sound design capabilities with intuitive performance features. With its modular architecture, extensive modulation options, and powerful effects, the Solaris Synth x2 is the ultimate tool for creating complex and evolving soundscapes. Whether you're a sound designer, film composer, or electronic musician, the Solaris Synth x2 is the perfect choice for exploring new sonic frontiers.",
                             Image = "product6.jpg",
-                            Name = "Product 6",
-                            Price = 72m
+                            Name = "Solaris Synth x2",
+                            Price = 1799m
                         },
                         new
                         {
                             Id = 7,
-                            Description = "Synth!",
+                            Description = "The Analog Dream 8 is a powerful analog synthesizer with a modern twist. Featuring classic oscillators, a versatile filter section, and a built-in sequencer, the Analog Dream 8 is the perfect tool for creating anything from fat bass lines to soaring leads. Whether you're a seasoned synth pro or a beginner, the Analog Dream 8 is an essential addition to your studio setup.",
                             Image = "product7.jpg",
-                            Name = "Product 7",
-                            Price = 58m
+                            Name = "Analog Dream 8",
+                            Price = 799m
                         },
                         new
                         {
                             Id = 8,
-                            Description = "Synth!",
+                            Description = "The Matrix Tribe is a groundbreaking digital synthesizer that offers unparalleled sound design capabilities. With its advanced modulation matrix, unique waveshaping algorithms, and built-in effects, the Matrix Tribe is the ultimate tool for creating complex and evolving textures. Whether you're a sound designer, experimental musician, or electronic artist, the Matrix Tribe is the perfect choice for pushing the boundaries of sound.",
                             Image = "product8.jpg",
-                            Name = "Product 8",
-                            Price = 68m
+                            Name = "Matrix Tribe",
+                            Price = 1499m
                         },
                         new
                         {
                             Id = 9,
-                            Description = "Synth!",
+                            Description = "The MicroDoser XXL is a compact synthesizer that packs a punch. Featuring a powerful synthesis engine, a wide range of sounds, and an intuitive interface, the MicroDoser XXL is the perfect tool for creating anything from vintage-style analog tones to modern digital textures. Whether you're performing live or producing in the studio, the MicroDoser XXL is a versatile and essential tool for any musician.",
                             Image = "product9.jpg",
-                            Name = "Product 9",
-                            Price = 52m
+                            Name = "MicroDoser XXL",
+                            Price = 599m
                         },
                         new
                         {
                             Id = 10,
-                            Description = "Synth!",
+                            Description = "The Solar Flax is a stunning digital synthesizer with a sleek and modern design. Featuring a powerful sound engine, intuitive controls, and a built-in arpeggiator, the Solar Flax is the perfect tool for creating anything from classic analog sounds to cutting-edge digital textures. Whether you're a professional musician or a hobbyist, the Solar Flax is a must-have for any synth lover.",
                             Image = "product10.jpg",
-                            Name = "Product 10",
-                            Price = 68m
+                            Name = "Solar Flax",
+                            Price = 899m
                         },
                         new
                         {
                             Id = 11,
-                            Description = "Synth!",
+                            Description = "The Neon Pulse 5 is a legendary analog synthesizer that has been used on countless classic recordings. With its warm and rich sound, versatile filter section, and intuitive interface, the Neon Pulse 5 is still the standard by which all other synthesizers are judged. Whether you're a professional musician or a vintage synth collector, the Neon Pulse 5 is an essential addition to your studio setup.",
                             Image = "product11.jpg",
-                            Name = "Product 11",
-                            Price = 72m
+                            Name = "Neon Pulse 5",
+                            Price = 3999m
                         },
                         new
                         {
                             Id = 12,
-                            Description = "Synth!",
+                            Description = "The Velocity Drive is a powerful digital synthesizer that offers a wide range of sounds and features. With its advanced sound engine, intuitive interface, and onboard effects, you can easily create anything from classic analog tones to cutting-edge digital textures. Whether you're performing live or producing in the studio, the Velocity Drive is an essential tool for any musician.",
                             Image = "product12.jpg",
-                            Name = "Product 12",
-                            Price = 88m
+                            Name = "Velocity Drive",
+                            Price = 499m
                         },
                         new
                         {
                             Id = 13,
-                            Description = "Synth!",
+                            Description = "The Modular Madness 88 is a customizable and expandable digital synthesizer that allows you to create your own unique sound. Featuring a modular design, you can add and remove modules to create a synth that is tailored to your specific needs. With its advanced modulation capabilities, built-in effects, and intuitive interface, the Modular Madness 88 is the ultimate tool for sound design and experimentation.",
                             Image = "product13.jpg",
-                            Name = "Product 13",
-                            Price = 75m
+                            Name = "Modular Madness 88",
+                            Price = 1999m
                         },
                         new
                         {
                             Id = 14,
-                            Description = "Synth!",
+                            Description = "The Quantum Wave Z is a powerful and versatile digital synthesizer that offers a wide range of sounds and features. With its advanced sound engine, intuitive interface, and built-in effects, you can easily create anything from classic analog tones to modern digital textures. Whether you're performing live or producing in the studio, the Quantum Wave Z is an essential tool for any musician.",
                             Image = "product14.jpg",
-                            Name = "Product 14",
-                            Price = 86m
+                            Name = "Quantum Wave Z",
+                            Price = 899m
                         },
                         new
                         {
                             Id = 15,
-                            Description = "Synth!",
+                            Description = "The InfinityX 888 is a modern analog synthesizer that builds upon the classic sound of the Prophet 5. Featuring a rich and warm sound, versatile filter section, and intuitive interface, the InfinityX 888 is the perfect tool for creating anything from fat bass lines to soaring leads. Whether you're a seasoned synth pro or a beginner, the InfinityX 888 is an essential addition to your studio setup.",
                             Image = "product15.jpg",
-                            Name = "Product 15",
-                            Price = 82m
+                            Name = "InfinityX 888",
+                            Price = 2999m
                         },
                         new
                         {
                             Id = 16,
-                            Description = "Synth!",
+                            Description = "The MicroQuantum 420 is a cutting-edge digital synthesizer that offers unparalleled sound design capabilities. Featuring advanced wavetable algorithms, a versatile filter section, and a built-in arpeggiator, the MicroQuantum 420 is the perfect tool for creating complex and evolving textures. Whether you're a sound designer, experimental musician, or electronic artist, the MicroQuantum 420 is the ultimate choice for pushing the boundaries of sound.",
                             Image = "product16.jpg",
-                            Name = "Product 16",
-                            Price = 97m
+                            Name = "MicroQuantum 420",
+                            Price = 1299m
                         },
                         new
                         {
                             Id = 17,
-                            Description = "Synth!",
+                            Description = "The Moonbox Charger is a vintage analog synthesizer that has been used on countless classic recordings. With its warm and rich sound, versatile filter section, and intuitive interface, the Moonbox Charger is still a favorite among synth enthusiasts. Whether you're a vintage synth collector or a modern musician looking for classic tones, the Moonbox Charger is an essential addition to your studio setup.",
                             Image = "product17.jpg",
-                            Name = "Product 17",
-                            Price = 78m
+                            Name = "Moonbox Charger",
+                            Price = 2499m
                         },
                         new
                         {
                             Id = 18,
-                            Description = "Synth!",
+                            Description = "The ScreamR is a versatile digital synthesizer with a sleek and modern design. Featuring advanced sound synthesis algorithms, a wide range of sounds, and a built-in sequencer, the ScreamR is the perfect tool for creating anything from classic analog tones to cutting-edge digital textures. Whether you're a professional musician or a hobbyist, the ScreamR is a must-have for any synth lover.",
                             Image = "product18.jpg",
-                            Name = "Product 18",
-                            Price = 53m
+                            Name = "ScreamR",
+                            Price = 999m
                         },
                         new
                         {
                             Id = 19,
-                            Description = "Synth!",
+                            Description = "The MiniMono Galactic is a powerful analog synthesizer with a classic sound. Featuring a versatile filter section, a built-in sequencer, and an intuitive interface, the MiniMono Galactic is perfect for creating everything from deep bass lines to soaring leads. With its compact size and rugged construction, the MiniMono Galactic is perfect for both live performance and studio use.",
                             Image = "product19.jpg",
-                            Name = "Product 19",
-                            Price = 62m
+                            Name = "MiniMono Galactic",
+                            Price = 599m
                         },
                         new
                         {
                             Id = 20,
-                            Description = "Synth!",
+                            Description = "The FM Galaxy Brain is a powerful digital synthesizer that uses frequency modulation to create complex and evolving sounds. Featuring advanced algorithms, a wide range of sounds, and a built-in effects section, the FM Galaxy Brain is the perfect tool for sound design and experimentation. Whether you're a synth enthusiast or a professional musician, the FM Galaxy Brain is an essential addition to your studio setup.",
                             Image = "product20.jpg",
-                            Name = "Product 20",
-                            Price = 87m
+                            Name = "FM Galaxy Brain",
+                            Price = 1499m
                         });
                 });
 

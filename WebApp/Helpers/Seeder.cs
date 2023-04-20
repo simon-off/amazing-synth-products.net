@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json.Linq;
 using WebApp.Models.Entities;
 
 namespace WebApp.Helpers;
@@ -33,20 +34,26 @@ public static class Seeder
             new Category { Id = 3, Name = "Popular" }
         );
 
-        // Create product for seeding
+        var seedData = JArray.Parse(File.ReadAllText(@"Helpers\seed-data.json"));
         var products = new List<Product>();
-        for (var i = 1; i <= 20; i++)
+        foreach (var item in seedData)
         {
-            products.Add(
-                new Product
-                {
-                    Id = i,
-                    Name = $"Product {i}",
-                    Description = "Synth!",
-                    Image = $"product{i}.jpg",
-                    Price = Random.Shared.Next(50, 100),
-                });
+            products.Add(item.ToObject<Product>());
         }
+
+        // Create product for seeding
+        // for (var i = 1; i <= 20; i++)
+        // {
+        //     products.Add(
+        //         new Product
+        //         {
+        //             Id = i,
+        //             Name = $"Product {i}",
+        //             Description = "Synth!",
+        //             Image = $"product{i}.jpg",
+        //             Price = Random.Shared.Next(50, 100),
+        //         });
+        // }
 
         // Seed Products
         modelBuilder.Entity<Product>().HasData(products);
