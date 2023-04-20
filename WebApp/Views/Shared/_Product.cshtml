@@ -1,0 +1,11 @@
+@using WebApp.ViewModels.Shared
+
+@model ProductViewModel
+
+<p>@Model.Name</p>
+<p>@Model.Description</p>
+@foreach (var category in Model.Categories)
+{
+    <p>@category.Name</p>
+}
+<img src="images/products/@Model.Image" alt="@Model.Name">

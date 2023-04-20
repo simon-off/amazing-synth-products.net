@@ -1,0 +1,13 @@
+﻿@using WebApp.ViewModels.Products
+@using WebApp.ViewModels.Shared
+
+@model ProductsViewModel
+
+<h1>Products</h1>
+
+@foreach (var product in Model.Products)
+{
+    ProductViewModel productViewModel = new(product);
+
+    <partial name="~/Views/Shared/_Product.cshtml" model="productViewModel" />
+}
