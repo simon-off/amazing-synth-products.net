@@ -2,12 +2,14 @@
 
 @model Product
 
-<a asp-controller="Products" asp-action="ProductDetails" asp-route-id="@Model.Id">
-    <p>@Model.Name</p>
-    <p>@Model.Description</p>
-    @foreach (var category in Model.Categories)
-    {
-        <p>@category.Name</p>
-    }
-    <img src="/images/products/@Model.Image" alt="@Model.Name">
-</a>
+<article class="product-card">
+    <a asp-controller="Products" asp-action="ProductDetails" asp-route-id="@Model.Id">
+        <p>@Model.Name</p>
+        <p>@Model.Description</p>
+        @foreach (var category in Model.Categories)
+        {
+            <p>@category.Name</p>
+        }
+        <img src="/images/products/@Model.Image" alt="@Model.Name">
+    </a>
+</article>
