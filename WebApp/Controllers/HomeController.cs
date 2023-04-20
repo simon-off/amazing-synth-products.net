@@ -12,6 +12,7 @@ public class HomeController : Controller
         _context = context;
     }
 
+    [HttpGet("/")]
     public IActionResult Index()
     {
         var viewModel = new HomeViewModel(new List<CarouselViewModel> {
