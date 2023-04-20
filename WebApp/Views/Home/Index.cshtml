@@ -6,9 +6,10 @@
     ViewData["Title"] = "Home";
 }
 
-<h1>Amazing Synth Products .NET </h1>
-
-@foreach (var carousel in Model.Carousels)
-{
-    <partial name="_Carousel" model="carousel" />
-}
+<main class="main-home container">
+    <h1>Amazing Synth Products .NET </h1>
+    @foreach (var carousel in Model.Carousels)
+    {
+        <partial name="_Carousel" model="carousel" />
+    }
+</main>

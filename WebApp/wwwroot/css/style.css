@@ -56,4 +56,44 @@ h6 {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
-}/*# sourceMappingURL=main.css.map */
+}
+:root {
+  --max-width: 1200px;
+}
+
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+header {
+  border-bottom: 1px solid;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer {
+  border-top: 1px solid;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin-inline: auto;
+  width: 100%;
+}
+
+.product-card img {
+  border: 1px solid;
+}
+.product-card a {
+  color: unset;
+  text-decoration: none;
+}
+
+.main-products .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+  gap: 1rem;
+}/*# sourceMappingURL=style.css.map */

@@ -2,11 +2,12 @@
 
 @model ProductsViewModel
 
-<main class="products-main">
+<main class="main-products container">
     <h1>Products</h1>
-    
-    @foreach (var product in Model.Products)
-    {
-        <partial name="~/Views/Shared/_ProductCard.cshtml" model="product" />
-    }
+    <section class="gallery">
+        @foreach (var product in Model.Products)
+        {
+            <partial name="~/Views/Shared/_ProductCard.cshtml" model="product" />
+        }
+    </section>
 </main>
