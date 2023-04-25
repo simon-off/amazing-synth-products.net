@@ -6,4 +6,12 @@
   --color-text: #012;
   --color-bg: #f0f5f9;
   --color-bg: #fff;
+
+  --drem: 1rem;
+  @media only screen and (max-width: 900px) {
+    --drem: 0.75rem;
+  }
+  @media only screen and (max-width: 500px) {
+    --drem: 0.5rem;
+  }
 }

@@ -13,7 +13,9 @@ div {
   font-family: "JetBrains Mono", monospace;
 }
 
-p {
+p,
+input,
+textarea {
   font-family: "IBM Plex Sans", sans-serif;
 }
 
@@ -21,7 +23,8 @@ p {
   --color: rgba(51, 68, 85, 0.15);
   text-transform: uppercase;
   font-size: clamp(3.5rem, 12vw, 12rem);
-  line-height: normal;
+  line-height: 0.8;
+  margin-bottom: 3rem;
   color: transparent;
   text-align: center;
   -webkit-text-stroke: clamp(1px, 0.15vw, 3px) var(--color-text);

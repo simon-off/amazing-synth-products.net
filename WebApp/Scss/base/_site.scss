@@ -1,3 +1,8 @@
+*::selection {
+  background-color: rgba(0 100 200 / 0.5);
+  color: var(--color-bg);
+}
+
 body {
   display: grid;
   grid-template-rows: auto 1fr auto;
@@ -16,13 +21,16 @@ body {
 }
 
 main {
-  padding-top: 2rem;
-  padding-bottom: 4rem;
+  padding: 3rem 0rem;
+}
+
+section {
+  margin-bottom: 3rem;
 }
 
 .container {
-  max-width: calc(var(--max-width) + 4rem);
-  padding-inline: 2rem;
+  max-width: calc(var(--max-width) + (var(--drem) * 4));
+  padding-inline: calc(var(--drem) * 2);
   margin-inline: auto;
   width: 100%;
 }
