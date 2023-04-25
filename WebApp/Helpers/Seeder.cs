@@ -38,7 +38,7 @@ public static class Seeder
         var products = new List<Product>();
         foreach (var item in seedData)
         {
-            products.Add(item.ToObject<Product>());
+            products.Add(item.ToObject<Product>()!);
         }
 
         // Create product for seeding
