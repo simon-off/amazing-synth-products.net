@@ -1,0 +1,5 @@
+.carousel {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+  gap: 16px;
+}

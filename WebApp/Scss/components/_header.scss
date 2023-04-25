@@ -1,0 +1,11 @@
+header {
+  border-bottom: 1px solid;
+  nav {
+    display: flex;
+    justify-content: space-between;
+  }
+  a {
+    color: unset;
+    text-decoration: none;
+  }
+}

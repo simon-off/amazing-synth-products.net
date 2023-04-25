@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&family=JetBrains+Mono:wght@400;600;800&display=swap");
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span,
+div {
+  font-family: "JetBrains Mono", monospace;
+}
+
+p {
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+.fancy-heading {
+  --color: rgba(51, 68, 85, 0.15);
+  text-transform: uppercase;
+  font-size: clamp(3.5rem, 12vw, 12rem);
+  line-height: normal;
+  color: transparent;
+  text-align: center;
+  -webkit-text-stroke: clamp(1px, 0.15vw, 3px) var(--color-text);
+}

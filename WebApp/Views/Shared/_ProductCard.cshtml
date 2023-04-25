@@ -5,7 +5,9 @@
 <article class="product-card">
     <a asp-controller="Products" asp-action="ProductDetails" asp-route-id="@Model.Id">
         <img src="/images/products/@Model.Image" alt="@Model.Name">
-        <h3>@Model.Name</h3>
-        <p>$@Model.Price.ToString().Remove(Model.Price.ToString().Length - 2)</p>
+        <div>
+            <h3>@Model.Name</h3>
+            <span>$@Model.Price.ToString().Remove(Model.Price.ToString().Length - 2)</span>
+        </div>
     </a>
 </article>

@@ -1,32 +1,28 @@
 body {
   display: grid;
   grid-template-rows: auto 1fr auto;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  background-image: url("../images/background.jpg");
+  background-size: cover;
 }
 
-header {
-  border-bottom: 1px solid;
-  nav {
-    display: flex;
-    justify-content: space-between;
-  }
+.overlay {
+  position: fixed;
+  inset: 0;
+  backdrop-filter: blur(2px);
+  opacity: 0.15;
+  pointer-events: none;
 }
 
-footer {
-  border-top: 1px solid;
+main {
+  padding-top: 2rem;
+  padding-bottom: 4rem;
 }
 
 .container {
-  max-width: var(--max-width);
+  max-width: calc(var(--max-width) + 4rem);
+  padding-inline: 2rem;
   margin-inline: auto;
   width: 100%;
-}
-
-.product-card {
-  img {
-    border: 1px solid;
-  }
-  a {
-    color: unset;
-    text-decoration: none;
-  }
 }
