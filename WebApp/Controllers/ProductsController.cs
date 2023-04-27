@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using WebApp.ViewModels.Products;
 
 namespace WebApp.Controllers;
@@ -6,16 +7,12 @@ namespace WebApp.Controllers;
 public class ProductsController : Controller
 {
     private readonly Contexts.AppDbContext _context;
-
-    public ProductsController(Contexts.AppDbContext context)
-    {
-        _context = context;
-    }
+    public ProductsController(Contexts.AppDbContext context) { _context = context; }
 
     [HttpGet("products")]
-    public IActionResult Index()
+    public async Task<IActionResult> Index()
     {
-        var viewModel = new ProductsViewModel(_context.Products.ToList());
+        var viewModel = new ProductsViewModel(await _context.Products.ToListAsync());
         return View(viewModel);
     }
 

@@ -1,6 +1,11 @@
-﻿@using WebApp.Models
+﻿@using System.Web
+@using WebApp.Models
 
 @model Product
+
+@{
+    var paragraphs = Model.Description.Split("\n");
+}
 
 <main class="main-product-details container">
     <section>
@@ -8,7 +13,10 @@
         <div class="info">
             <div>
                 <h1>@Model.Name</h1>
-                <p>@Model.Description</p>
+                @foreach (var paragraph in paragraphs)
+                {
+                    <p>@paragraph</p>
+                }
             </div>
             <span class="price"><span>price: </span>$@Model.Price.ToString().Remove(Model.Price.ToString().Length -
                 2)</span>

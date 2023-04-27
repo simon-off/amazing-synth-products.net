@@ -35,10 +35,14 @@
     flex-direction: column;
     justify-content: space-between;
     gap: 1rem;
+    & > div {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
     h1 {
       font-size: 2rem;
       line-height: normal;
-      margin-bottom: 0.5rem;
     }
   }
   .price {

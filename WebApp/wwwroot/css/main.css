@@ -83,7 +83,6 @@ h3,
 h4,
 h5,
 h6,
-p,
 a,
 span,
 div,
@@ -198,10 +197,14 @@ section {
   justify-content: space-between;
   gap: 1rem;
 }
+.main-product-details .info > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
 .main-product-details .info h1 {
   font-size: 2rem;
   line-height: normal;
-  margin-bottom: 0.5rem;
 }
 .main-product-details .price {
   margin-left: auto;
@@ -308,6 +311,7 @@ form .input-row {
 }
 form label {
   text-transform: lowercase;
+  font-size: 1.125rem;
 }
 form input,
 form textarea {
@@ -324,6 +328,11 @@ form textarea:focus {
 form textarea {
   resize: vertical;
 }
+form span {
+  font-family: "IBM Plex Sans", sans-serif;
+  color: #ca009e;
+  font-size: 0.875rem;
+}
 
 button {
   border-radius: var(--border-radius-small);
@@ -332,6 +341,7 @@ button {
   padding: 0.5rem;
   background-color: rgba(255, 255, 255, 0.75);
   text-transform: uppercase;
+  font-size: 1.125rem;
 }
 button:focus-visible {
   outline: 2px solid rgba(0, 174, 255, 0.75);
@@ -367,6 +377,7 @@ button:active {
   padding: 6px 12px;
 }
 .product-card h3 {
+  font-size: 1.125rem;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
