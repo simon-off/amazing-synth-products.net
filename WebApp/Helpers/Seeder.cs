@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json.Linq;
-using WebApp.Models.Entities;
+using WebApp.Models;
 
 namespace WebApp.Helpers;
 
@@ -40,20 +40,6 @@ public static class Seeder
         {
             products.Add(item.ToObject<Product>()!);
         }
-
-        // Create product for seeding
-        // for (var i = 1; i <= 20; i++)
-        // {
-        //     products.Add(
-        //         new Product
-        //         {
-        //             Id = i,
-        //             Name = $"Product {i}",
-        //             Description = "Synth!",
-        //             Image = $"product{i}.jpg",
-        //             Price = Random.Shared.Next(50, 100),
-        //         });
-        // }
 
         // Seed Products
         modelBuilder.Entity<Product>().HasData(products);

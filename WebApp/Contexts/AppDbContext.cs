@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using WebApp.Helpers;
-using WebApp.Models.Entities;
+using WebApp.Models;
 
 namespace WebApp.Contexts;
 
@@ -13,6 +13,7 @@ public class AppDbContext : IdentityDbContext
 
     public DbSet<Category> Categories { get; set; }
     public DbSet<Product> Products { get; set; }
+    public DbSet<ContactMessage> ContactMessages { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

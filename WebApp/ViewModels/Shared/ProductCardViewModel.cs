@@ -1,4 +1,4 @@
-using WebApp.Models.Entities;
+using WebApp.Models;
 
 namespace WebApp.ViewModels.Shared;
 
