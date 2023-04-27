@@ -1,23 +1,32 @@
-﻿<main class="main-contact container">
+﻿@using WebApp.Models
+
+@model ContactMessage
+
+<main class="main-contact container">
     <h1 class="fancy-heading">Contact</h1>
-    <form action="POST">
+    <form method="post">
         <div class="input-columns">
             <div class="input-row">
-                <label for="">Name</label>
-                <input type="text">
+                <label asp-for="Name"></label>
+                <input asp-for="Name">
+                <span asp-validation-for="Name"></span>
             </div>
             <div class="input-row">
-                <label for="">Email</label>
-                <input type="text">
+                <label asp-for="Email"></label>
+                <input asp-for="Email">
+                <span asp-validation-for="Email"></span>
             </div>
         </div>
         <div class="input-row">
-            <label for="">Subject</label>
-            <input type="text">
+            <label asp-for="Subject"></label>
+            <input asp-for="Subject">
+            <span asp-validation-for="Subject"></span>
         </div>
         <div class="input-row">
-            <label for="">Message</label>
-            <textarea name="" id="" cols="30" rows="8"></textarea>
+            <label asp-for="Message"></label>
+            <textarea asp-for="Message" rows="6"></textarea>
+            <span asp-validation-for="Message"></span>
         </div>
+        <button>Send</button>
     </form>
 </main>
