@@ -1,10 +1,10 @@
-﻿@using WebApp.Models
+﻿@using WebApp.ViewModels.Contact
 
-@model ContactMessage
+@model ContactViewModel
 
 <main class="main-contact container">
     <h1 class="fancy-heading">Contact</h1>
-    <form method="post">
+    <form method="post" novalidate>
         <div class="input-columns">
             <div class="input-row">
                 <label asp-for="Name"></label>

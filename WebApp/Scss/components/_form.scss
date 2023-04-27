@@ -26,6 +26,7 @@ form {
   }
   label {
     text-transform: lowercase;
+    font-size: 1.125rem;
   }
   input,
   textarea {
@@ -40,5 +41,10 @@ form {
   }
   textarea {
     resize: vertical;
+  }
+  span {
+    font-family: "IBM Plex Sans", sans-serif;
+    color: #ca009e;
+    font-size: 0.875rem;
   }
 }
