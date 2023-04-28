@@ -34,6 +34,7 @@ public static class Seeder
             new Category { Id = 3, Name = "Popular" }
         );
 
+        // Load Products from json
         var seedData = JArray.Parse(File.ReadAllText(@"Helpers\seed-data.json"));
         var products = new List<Product>();
         foreach (var item in seedData)
