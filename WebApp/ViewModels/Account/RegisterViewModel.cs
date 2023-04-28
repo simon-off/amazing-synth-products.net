@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using WebApp.Models;
 
 namespace WebApp.ViewModels.Account;
 
@@ -26,4 +27,15 @@ public class RegisterViewModel
     [Display(Name = "Confirm password")]
     [Compare(nameof(Password), ErrorMessage = "Passwords do not match")]
     public string ConfirmPassword { get; set; } = null!;
+
+    public static implicit operator AppUser(RegisterViewModel vm)
+    {
+        return new AppUser
+        {
+            FirstName = vm.FirstName,
+            LastName = vm.LastName,
+            UserName = vm.Email,
+            Email = vm.Email,
+        };
+    }
 }

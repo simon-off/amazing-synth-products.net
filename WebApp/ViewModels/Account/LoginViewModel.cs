@@ -11,4 +11,7 @@ public class LoginViewModel
     [DataType(DataType.Password)]
     [Required(ErrorMessage = "{0} is required")]
     public string Password { get; set; } = null!;
+
+    [Display(Name = "Keep me logged in")]
+    public bool RememberMe { get; set; }
 }

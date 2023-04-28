@@ -22,7 +22,7 @@ builder.Services.AddIdentity<AppUser, IdentityRole>(x =>
     x.Password.RequiredLength = 6;
 }).AddEntityFrameworkStores<AppDbContext>();
 
-// Use lowercase urls
+// Use lowercase URLs
 builder.Services.Configure<RouteOptions>(options =>
 {
     options.LowercaseUrls = true;
