@@ -12,6 +12,7 @@ button,
   }
   &:hover,
   &:focus {
+    cursor: pointer;
     background-color: rgba(255 255 255 / 1);
     box-shadow: 4px 4px;
     transform: translate(-1px, -1px);

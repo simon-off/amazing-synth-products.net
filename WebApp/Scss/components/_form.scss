@@ -19,10 +19,10 @@ form {
       flex: 1 1 250px;
     }
   }
-  .input-row {
-    display: flex;
-    gap: 2px;
-    flex-direction: column;
+  .input-row-remember {
+    span {
+      display: none;
+    }
   }
   label {
     text-transform: lowercase;
@@ -45,6 +45,7 @@ form {
   span {
     font-family: "IBM Plex Sans", sans-serif;
     color: #ca009e;
+    color: var(--color-warning);
     font-size: 0.875rem;
   }
   .buttons {
@@ -54,6 +55,19 @@ form {
     button,
     a {
       flex: 1;
+    }
+  }
+  .validation-summary-errors {
+    font-family: "IBM Plex Sans", sans-serif;
+    color: var(--color-warning);
+    ul {
+      padding: 0;
+      list-style: none;
+    }
+    li::before {
+      content: "!";
+      padding-right: 0.5rem;
+      font-weight: bold;
     }
   }
 }
