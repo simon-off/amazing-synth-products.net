@@ -23,6 +23,13 @@
                 <p class="small">Email Address:</p>
                 <p>@Model.Email</p>
             </div>
+            <div>
+                <p class="small">Roles:</p>
+                @foreach (var role in Model.Roles)
+                {
+                    <p>@role</p>
+                }
+            </div>
         </div>
     </section>
 </main>

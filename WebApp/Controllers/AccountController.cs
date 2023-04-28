@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using WebApp.Contexts;
 using WebApp.Models;
 using WebApp.ViewModels.Account;
 
@@ -25,7 +24,9 @@ public class AccountController : Controller
         if (user == null)
             return RedirectToAction("Login");
 
-        return View(new AccountViewModel(user));
+        var roles = await _userManager.GetRolesAsync(user);
+
+        return View(new AccountViewModel(user, roles));
     }
 
     [HttpGet("account/login")]
@@ -68,10 +69,11 @@ public class AccountController : Controller
         if (!ModelState.IsValid)
             return View(viewModel);
 
-        var result = await _userManager.CreateAsync(viewModel, viewModel.Password);
-        if (!result.Succeeded)
+        AppUser user = viewModel;
+        var createResult = await _userManager.CreateAsync(user, viewModel.Password);
+        if (!createResult.Succeeded)
         {
-            foreach (var error in result.Errors)
+            foreach (var error in createResult.Errors)
             {
                 // Skip username duplication error
                 if (error.Code == "DuplicateUserName")
@@ -80,6 +82,17 @@ public class AccountController : Controller
                 ModelState.AddModelError("", error.Description);
             }
             return View(viewModel);
+        }
+
+        await _userManager.AddToRoleAsync(user, "user");
+        // Add admin role if first registered user, else add customer
+        if (_userManager.Users.Count() <= 1)
+        {
+            await _userManager.AddToRoleAsync(user, "admin");
+        }
+        else
+        {
+            await _userManager.AddToRoleAsync(user, "customer");
         }
 
         return RedirectToAction("Login", "Account");

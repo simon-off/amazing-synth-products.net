@@ -23,8 +23,9 @@ public static class Seeder
     {
         // Seed Roles
         modelBuilder.Entity<IdentityRole>().HasData(
-            new IdentityRole { Id = "admin", Name = "Admin" },
-            new IdentityRole { Id = "customer", Name = "Customer" }
+            new IdentityRole { Id = "user", Name = "User", NormalizedName = "USER" },
+            new IdentityRole { Id = "admin", Name = "Admin", NormalizedName = "ADMIN" },
+            new IdentityRole { Id = "customer", Name = "Customer", NormalizedName = "CUSTOMER" }
         );
 
         // Seed Categories
