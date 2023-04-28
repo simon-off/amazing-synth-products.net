@@ -1,3 +1,28 @@
-﻿<main class="main-account container">
+﻿@using WebApp.ViewModels.Account
+
+@model AccountViewModel
+
+<main class="main-account container">
     <h1 class="fancy-heading">Account</h1>
+    <section>
+        <header>
+            <h2>Hello @Model.FirstName!</h2>
+            <a class="button" asp-controller="Account" asp-action="Logout">Sign out</a>
+        </header>
+        <div class="info">
+            <h3>Account Details</h3>
+            <div>
+                <p class="small">First Name:</p>
+                <p>@Model.FirstName</p>
+            </div>
+            <div>
+                <p class="small">Last Name:</p>
+                <p>@Model.LastName</p>
+            </div>
+            <div>
+                <p class="small">Email Address:</p>
+                <p>@Model.Email</p>
+            </div>
+        </div>
+    </section>
 </main>

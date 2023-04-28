@@ -225,7 +225,7 @@ section {
   align-items: center;
 }
 .main-contact form {
-  max-width: 700px;
+  max-width: 800px;
 }
 
 .main-login,
@@ -236,16 +236,75 @@ section {
 }
 .main-login form,
 .main-register form {
-  max-width: 700px;
+  max-width: 800px;
 }
 
-header {
+.main-account section {
+  -webkit-backdrop-filter: blur(8px) brightness(1.3) saturate(0.75);
+          backdrop-filter: blur(8px) brightness(1.3) saturate(0.75);
+  border-radius: var(--border-radius-small);
+  box-shadow: 8px 8px;
+  border: 1px solid;
+  margin: 0 8px 8px 0;
+  overflow: hidden;
+  max-width: 800px;
+  margin-inline: auto;
+}
+.main-account header {
+  display: flex;
+  padding: 1rem;
+  gap: 1rem;
   border-bottom: 1px solid;
-  font-size: clamp(1rem, 5.5vw, 1.5rem);
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 500px) {
+  .main-account header {
+    flex-direction: column;
+  }
+  .main-account header h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  .main-account header .button {
+    width: 100%;
+  }
+}
+.main-account .info {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.main-account .info div {
+  background-color: rgba(175, 225, 255, 0.75);
+  border: 1px solid;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius-small);
+}
+.main-account .info h3 {
+  font-size: 1.125rem;
+  font-weight: 400;
+  text-transform: lowercase;
+}
+.main-account .info p {
+  line-height: 1.2;
+  font-size: 1.5rem;
+}
+.main-account .info .small {
+  text-transform: lowercase;
+  font-size: 0.875rem;
+  opacity: 0.625;
+}
+
+.header {
+  border-bottom: 1px solid;
+  font-size: clamp(1rem, 5.5vw, 1.25rem);
   -webkit-backdrop-filter: blur(8px) brightness(1.3) saturate(0.75);
           backdrop-filter: blur(8px) brightness(1.3) saturate(0.75);
 }
-header nav {
+.header nav {
   max-width: calc(var(--max-width) + var(--drem) * 4);
   padding-inline: var(--drem);
   margin-inline: auto;
@@ -253,38 +312,38 @@ header nav {
   justify-content: space-between;
 }
 @media only screen and (max-width: 800px) {
-  header nav {
+  .header nav {
     flex-direction: column;
     align-items: center;
   }
 }
-header a {
+.header a {
   color: unset;
   text-decoration: none;
   padding: var(--drem);
 }
-header .logo {
+.header .logo {
   display: flex;
   align-items: center;
   color: rgba(0, 50, 100, 0.6);
 }
 @media only screen and (max-width: 800px) {
-  header .logo {
+  .header .logo {
     border-bottom: 1px solid var(--color-text);
   }
 }
-header .logo span {
+.header .logo span {
   color: var(--color-text);
 }
-header div {
+.header div {
   display: flex;
 }
-header div a {
+.header div a {
   text-transform: lowercase;
   display: inline-block;
 }
 
-footer {
+.footer {
   border-top: 1px solid;
   -webkit-backdrop-filter: blur(8px) brightness(1.3) saturate(0.75);
           backdrop-filter: blur(8px) brightness(1.3) saturate(0.75);

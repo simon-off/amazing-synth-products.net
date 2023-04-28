@@ -5,6 +5,7 @@
 <main class="main-register container">
     <h1 class="fancy-heading">Register</h1>
     <form method="post" novalidate>
+        <div asp-validation-summary="ModelOnly"></div>
         <div class="input-columns">
             <div class="input-row">
                 <label asp-for="FirstName"></label>

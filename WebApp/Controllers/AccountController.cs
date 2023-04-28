@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using WebApp.Contexts;
 using WebApp.Models;
 using WebApp.ViewModels.Account;
 
@@ -18,19 +19,26 @@ public class AccountController : Controller
 
     [Authorize]
     [HttpGet("account")]
-    public IActionResult Index()
+    public async Task<IActionResult> Index()
     {
-        return View();
+        var user = await _userManager.FindByNameAsync(User.Identity?.Name ?? "");
+        if (user == null)
+            return RedirectToAction("Login");
+
+        return View(new AccountViewModel(user));
     }
 
     [HttpGet("account/login")]
     public IActionResult Login()
     {
+        if (_signInManager.IsSignedIn(User))
+            return RedirectToAction("Index");
+
         return View();
     }
 
     [HttpPost("account/login")]
-    public async Task<IActionResult> LoginAsync(LoginViewModel viewModel)
+    public async Task<IActionResult> Login(LoginViewModel viewModel)
     {
         if (!ModelState.IsValid)
             return View(viewModel);
@@ -42,12 +50,15 @@ public class AccountController : Controller
             return View(viewModel);
         }
 
-        return RedirectToAction("Index", "Home");
+        return RedirectToAction("Index", "Account");
     }
 
     [HttpGet("account/register")]
     public IActionResult Register()
     {
+        if (_signInManager.IsSignedIn(User))
+            return RedirectToAction("Index");
+
         return View();
     }
 
@@ -62,12 +73,16 @@ public class AccountController : Controller
         {
             foreach (var error in result.Errors)
             {
+                // Skip username duplication error
+                if (error.Code == "DuplicateUserName")
+                    continue;
+
                 ModelState.AddModelError("", error.Description);
             }
             return View(viewModel);
         }
 
-        return RedirectToAction("Index", "Login");
+        return RedirectToAction("Login", "Account");
     }
 
     [Authorize]
