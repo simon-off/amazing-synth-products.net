@@ -212,13 +212,21 @@ namespace WebApp.Data.Migrations
                     b.HasData(
                         new
                         {
+                            Id = "user",
+                            Name = "User",
+                            NormalizedName = "USER"
+                        },
+                        new
+                        {
                             Id = "admin",
-                            Name = "Admin"
+                            Name = "Admin",
+                            NormalizedName = "ADMIN"
                         },
                         new
                         {
                             Id = "customer",
-                            Name = "Customer"
+                            Name = "Customer",
+                            NormalizedName = "CUSTOMER"
                         });
                 });
 
