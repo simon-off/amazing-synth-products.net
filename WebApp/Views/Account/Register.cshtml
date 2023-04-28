@@ -1,0 +1,41 @@
+@using WebApp.ViewModels.Account
+
+@model RegisterViewModel
+
+<main class="main-register container">
+    <h1 class="fancy-heading">Register</h1>
+    <form method="post" novalidate>
+        <div class="input-columns">
+            <div class="input-row">
+                <label asp-for="FirstName"></label>
+                <input asp-for="FirstName">
+                <span asp-validation-for="FirstName"></span>
+            </div>
+            <div class="input-row">
+                <label asp-for="LastName"></label>
+                <input asp-for="LastName">
+                <span asp-validation-for="LastName"></span>
+            </div>
+        </div>
+        <div class="input-row">
+            <label asp-for="Email"></label>
+            <input asp-for="Email">
+            <span asp-validation-for="Email"></span>
+        </div>
+        <div class="input-columns">
+            <div class="input-row">
+                <label asp-for="Password"></label>
+                <input asp-for="Password" data-val-min-length="Minimum 6 characters">
+                <span asp-validation-for="Password"></span>
+            </div>
+            <div class="input-row">
+                <label asp-for="ConfirmPassword"></label>
+                <input asp-for="ConfirmPassword">
+                <span asp-validation-for="ConfirmPassword"></span>
+            </div>
+        </div>
+        <div class="buttons">
+            <button>Register</button>
+        </div>
+    </form>
+</main>

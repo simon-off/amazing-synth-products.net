@@ -19,8 +19,14 @@ builder.Services.AddIdentity<AppUser, IdentityRole>(x =>
     x.Password.RequireUppercase = false;
     x.Password.RequireNonAlphanumeric = false;
     x.Password.RequireDigit = false;
+    x.Password.RequiredLength = 6;
 }).AddEntityFrameworkStores<AppDbContext>();
 
+// Use lowercase urls
+builder.Services.Configure<RouteOptions>(options =>
+{
+    options.LowercaseUrls = true;
+});
 
 var app = builder.Build();
 

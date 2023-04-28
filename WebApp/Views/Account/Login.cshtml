@@ -1,0 +1,23 @@
+@using WebApp.ViewModels.Account
+
+@model LoginViewModel
+
+<main class="main-login container">
+    <h1 class="fancy-heading">Login</h1>
+    <form method="post" novalidate>
+        <div class="input-row">
+            <label asp-for="Email"></label>
+            <input asp-for="Email">
+            <span asp-validation-for="Email"></span>
+        </div>
+        <div class="input-row">
+            <label asp-for="Password"></label>
+            <input asp-for="Password">
+            <span asp-validation-for="Password"></span>
+        </div>
+        <div class="buttons">
+            <a class="button" asp-controller="account" asp-action="register">register</a>
+            <button type="submit">Login</button>
+        </div>
+    </form>
+</main>
