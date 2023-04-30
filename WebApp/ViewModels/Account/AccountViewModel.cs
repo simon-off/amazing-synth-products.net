@@ -1,19 +1,11 @@
 using WebApp.Models;
+using WebApp.ViewModels.Shared;
 
 namespace WebApp.ViewModels.Account;
 
-public class AccountViewModel
+public class AccountViewModel : UserProfileViewModel
 {
-    public AccountViewModel(AppUser user, IList<string> roles)
+    public AccountViewModel(AppUser user, IList<string> roles) : base(user, roles)
     {
-        Email = user.Email!;
-        FirstName = user.FirstName;
-        LastName = user.LastName;
-        Roles = roles;
     }
-
-    public string Email { get; set; }
-    public string FirstName { get; set; }
-    public string LastName { get; set; }
-    public IList<string> Roles { get; set; }
 }

@@ -6,3 +6,12 @@
     max-width: 800px;
   }
 }
+
+.main-message-sent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  a {
+    margin-top: 1rem;
+  }
+}
