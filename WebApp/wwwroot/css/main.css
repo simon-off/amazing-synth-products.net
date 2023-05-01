@@ -316,6 +316,17 @@ section {
   opacity: 0.625;
 }
 
+.main-denied {
+  text-align: center;
+}
+.main-denied h1 {
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+.main-denied a {
+  margin-top: 1rem;
+}
+
 .main-admin section {
   -webkit-backdrop-filter: blur(8px) brightness(1.3) saturate(0.75);
           backdrop-filter: blur(8px) brightness(1.3) saturate(0.75);

@@ -1,7 +1,4 @@
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.RateLimiting;
-using Microsoft.EntityFrameworkCore;
-using WebApp.Models;
 using WebApp.ViewModels.Contact;
 
 namespace WebApp.Controllers;
@@ -24,6 +21,7 @@ public class ContactController : Controller
         {
             await _context.ContactMessages.AddAsync(viewModel);
             await _context.SaveChangesAsync();
+            TempData["formSubmitted"] = true;
             return RedirectToAction("MessageSent");
         }
         return View(viewModel);
@@ -32,6 +30,9 @@ public class ContactController : Controller
     [HttpGet("contact/sent")]
     public IActionResult MessageSent()
     {
-        return View();
+        if (TempData.ContainsKey("formSubmitted") && (bool)TempData["formSubmitted"])
+            return View();
+
+        return RedirectToAction("Index");
     }
 }

@@ -104,4 +104,9 @@ public class AccountController : Controller
         await _signInManager.SignOutAsync();
         return LocalRedirect("/");
     }
+
+    public IActionResult Denied()
+    {
+        return View();
+    }
 }

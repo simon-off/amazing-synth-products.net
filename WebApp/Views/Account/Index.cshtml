@@ -18,19 +18,15 @@
         <div class="info">
             <h3>Account Details</h3>
             <div>
-                <p class="small">First Name:</p>
-                <p>@Model.FirstName</p>
+                <p class="small">Name</p>
+                <p>@Model.FirstName @Model.LastName</p>
             </div>
             <div>
-                <p class="small">Last Name:</p>
-                <p>@Model.LastName</p>
-            </div>
-            <div>
-                <p class="small">Email Address:</p>
+                <p class="small">Email</p>
                 <p>@Model.Email</p>
             </div>
             <div>
-                <p class="small">Roles:</p>
+                <p class="small">Roles</p>
                 <p>@string.Join(", ", Model.Roles)</p>
             </div>
         </div>

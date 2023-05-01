@@ -22,6 +22,11 @@ builder.Services.AddIdentity<AppUser, IdentityRole>(x =>
     x.Password.RequiredLength = 6;
 }).AddEntityFrameworkStores<AppDbContext>();
 
+builder.Services.ConfigureApplicationCookie(x =>
+{
+    x.AccessDeniedPath = "/account/denied";
+});
+
 // Use lowercase URLs
 builder.Services.Configure<RouteOptions>(options =>
 {
@@ -30,6 +35,7 @@ builder.Services.Configure<RouteOptions>(options =>
 
 var app = builder.Build();
 
+app.UseHsts();
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
