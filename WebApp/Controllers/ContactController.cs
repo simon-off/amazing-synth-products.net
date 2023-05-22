@@ -30,7 +30,7 @@ public class ContactController : Controller
     [HttpGet("contact/sent")]
     public IActionResult MessageSent()
     {
-        if (TempData.ContainsKey("formSubmitted") && (bool)TempData["formSubmitted"])
+        if (TempData.ContainsKey("formSubmitted") && (bool)TempData["formSubmitted"]!)
             return View();
 
         return RedirectToAction("Index");

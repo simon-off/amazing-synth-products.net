@@ -1,3 +1,87 @@
+.showcase {
+  color: unset;
+  text-decoration: none;
+  backdrop-filter: blur(8px) brightness(1.3) saturate(0.75);
+  border-radius: var(--border-radius-small);
+  box-shadow: 8px 8px;
+  border: 1px solid;
+  margin: 0 8px 8px 0;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  @media only screen and (max-width: 800px) {
+    grid-template-columns: 1fr;
+  }
+  img {
+    border-right: 1px solid;
+    object-fit: cover;
+    height: 100%;
+    @media only screen and (max-width: 800px) {
+      border-right: none;
+      border-bottom: 1px solid;
+    }
+  }
+  .info {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    & > div {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    h2 {
+      text-transform: uppercase;
+      font-size: clamp(1.5rem, 5vw, 3rem);
+      line-height: 1;
+      -webkit-text-stroke: clamp(1px, 0.1vw, 2px) var(--color-text);
+      color: white;
+      letter-spacing: -0.05em;
+      @media only screen and (max-width: 800px) {
+        font-size: clamp(1.5rem, 9vw, 6rem);
+      }
+    }
+    h3 {
+      --spacing-x: 0.05em;
+      --spacing-y: 0.05em;
+      --saturation: 100%;
+      --lightness: 60%;
+      --base-hue: 200;
+      --hue-rotate: 30;
+
+      text-transform: uppercase;
+      line-height: 1;
+      min-height: calc(1em + var(--spacing-y) * 7);
+      font-size: clamp(1.8rem, 5vw, 4rem);
+      font-weight: 700;
+      color: hsl(var(--base-hue), 100%, 60%);
+      // prettier-ignore
+      text-shadow:
+        calc(var(--spacing-x) * 1)    calc(var(--spacing-y) * 1)    hsla(calc(var(--base-hue) + var(--hue-rotate) * 1), var(--saturation), var(--lightness), 0.8),
+        calc(var(--spacing-x) * 2)    calc(var(--spacing-y) * 2)    hsla(calc(var(--base-hue) + var(--hue-rotate) * 2), var(--saturation), var(--lightness), 0.7),
+        calc(var(--spacing-x) * 3.5)  calc(var(--spacing-y) * 3.5)  hsla(calc(var(--base-hue) + var(--hue-rotate) * 3), var(--saturation), var(--lightness), 0.6),
+        calc(var(--spacing-x) * 5.5)  calc(var(--spacing-y) * 5.5)  hsla(calc(var(--base-hue) + var(--hue-rotate) * 4), var(--saturation), var(--lightness), 0.5),
+        calc(var(--spacing-x) * 8)    calc(var(--spacing-y) * 8)    hsla(calc(var(--base-hue) + var(--hue-rotate) * 5), var(--saturation), var(--lightness), 0.4),
+        calc(var(--spacing-x) * 11)   calc(var(--spacing-y) * 11)   hsla(calc(var(--base-hue) + var(--hue-rotate) * 6), var(--saturation), var(--lightness), 0.3),
+        calc(var(--spacing-x) * 14.5) calc(var(--spacing-y) * 14.5) hsla(calc(var(--base-hue) + var(--hue-rotate) * 7), var(--saturation), var(--lightness), 0.2),
+        calc(var(--spacing-x) * 18.5) calc(var(--spacing-y) * 18.5) hsla(calc(var(--base-hue) + var(--hue-rotate) * 8), var(--saturation), var(--lightness), 0.1);
+    }
+  }
+  .price {
+    margin-left: auto;
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1;
+    span {
+      font-size: 1rem;
+      font-weight: normal;
+      text-transform: uppercase;
+    }
+  }
+}
+
 .carousel {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, auto));

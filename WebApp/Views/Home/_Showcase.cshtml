@@ -1,0 +1,19 @@
+@using WebApp.ViewModels.Home
+
+@model ShowcaseViewModel
+
+<section>
+    <a asp-controller="Products" asp-action="ProductDetails" asp-route-id="@Model.Product.Id" class="showcase">
+        <img src="/images/products/@Model.Product.Image" alt="@Model.Product.Name">
+        <div class="info">
+            <div>
+                <h2>@Model.Title</h2>
+                <h3>@Model.Product.Name</h3>
+            </div>
+            <span class="price">
+                <span>price: </span>
+                $@Model.Product.Price.ToString().Remove(Model.Product.Price.ToString().Length -2)
+            </span>
+        </div>
+    </a>
+</section>
