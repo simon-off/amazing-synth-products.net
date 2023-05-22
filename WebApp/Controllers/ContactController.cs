@@ -1,12 +1,13 @@
 using Microsoft.AspNetCore.Mvc;
 using WebApp.ViewModels.Contact;
+using WebApp.Contexts;
 
 namespace WebApp.Controllers;
 
 public class ContactController : Controller
 {
-    private readonly Contexts.AppDbContext _context;
-    public ContactController(Contexts.AppDbContext context) { _context = context; }
+    private readonly AppDbContext _context;
+    public ContactController(AppDbContext context) { _context = context; }
 
     [HttpGet("contact")]
     public IActionResult Index()

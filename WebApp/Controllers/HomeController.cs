@@ -1,13 +1,14 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WebApp.ViewModels.Home;
+using WebApp.Contexts;
 
 namespace WebApp.Controllers;
 
 public class HomeController : Controller
 {
-    private readonly Contexts.AppDbContext _context;
-    public HomeController(Contexts.AppDbContext context) { _context = context; }
+    private readonly AppDbContext _context;
+    public HomeController(AppDbContext context) { _context = context; }
 
     [HttpGet("/")]
     public async Task<IActionResult> Index()

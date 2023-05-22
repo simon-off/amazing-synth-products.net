@@ -1,13 +1,14 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WebApp.ViewModels.Products;
+using WebApp.Contexts;
 
 namespace WebApp.Controllers;
 
 public class ProductsController : Controller
 {
-    private readonly Contexts.AppDbContext _context;
-    public ProductsController(Contexts.AppDbContext context) { _context = context; }
+    private readonly AppDbContext _context;
+    public ProductsController(AppDbContext context) { _context = context; }
 
     [HttpGet("products")]
     public async Task<IActionResult> Index()

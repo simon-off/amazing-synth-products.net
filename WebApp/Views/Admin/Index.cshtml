@@ -28,4 +28,19 @@
             </tbody>
         </table>
     </section>
+    <section class="section-contact-messages">
+        <h2>Contact messages</h2>
+        <div class="messages">
+            @foreach (var message in Model.ContactMessages)
+            {
+                <div class="message">
+                    <h3>@message.Subject</h3>
+                    <div class="body">
+                        <p class="sender">@message.Name | @message.Email</p>
+                        <p>@message.Message</p>
+                    </div>
+                </div>
+            }
+        </div>
+    </section>
 </main>
