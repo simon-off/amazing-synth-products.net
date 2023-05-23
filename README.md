@@ -6,7 +6,7 @@ Web store app made with [ASP.NET Core MVC](https://learn.microsoft.com/en-us/asp
 
 ## **About this app**
 
-_- AmazingSynthProducts.NET is a simple mock web store with account registration, products and a customer contact form_
+_- AmazingSynthProducts.NET is a simple mock web store with account registration/login/overview, product pages and a customer contact form_
 
 The database schema is set up with Entity Framework using a code-first approach and the data is stored in a local SQLite file: `webapp.db`. Accounts are created using the [ASP.NET Core Identity API](https://learn.microsoft.com/en-us/aspnet/core/security/authentication/identity). The first user to register an account is automatically assigned the role of **Admin**. This site was mainly created to get familiar with and practice ASP.NET Core and the Controller workflow.
 
@@ -45,6 +45,8 @@ This is the _Admin page_ of the website. Here you get an overview of all registe
 Additional pages includes Login, Register, Account Overview, Access denied etc.
 
 ---
+
+<br>
 
 ## **Running the app locally**
 
